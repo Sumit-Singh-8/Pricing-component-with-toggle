@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;600;700&display=swap");
+
+:root {
+  --primary-blue: hsl(228, 45%, 44%);
+  --very-light-grey-blue: hsl(240, 78%, 98%);
+  --light-grey-blue: hsl(234, 14%, 74%);
+  --grey-blue: hsl(233, 13%, 49%);
+  --dark-grey-blue: hsl(232, 13%, 33%);
+  --Linear-Gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%);
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--grey-blue);
+}
+
+.container::before {
+  content: "";
+  background: url(./images/bg-top.svg) no-repeat center center;
+  position: absolute;
+  width: 375px;
+  height: 658px;
+  top: -25;
+  right: 0;
+  z-index: -1;
+}
+
+.container::after {
+  content: "";
+  background: url(./images/bg-bottom.svg) center center no-repeat;
+  position: absolute;
+  width: 361px;
+  height: 317px;
+  left: -9px;
+  top: 360px;
+  z-index: -1;
+}
+.container .header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.box-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* ---------------Box Stylings -------------------------------- */
+.box {
+  width: 21rem;
+  height: 26rem;
+  text-align: center;
+  border: none;
+  padding: 10px 4px;
+  background-color: white;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  box-shadow: 3px 3px 25px #8080806e;
+}
+
+.bigger {
+  width: 22rem;
+  height: 28rem;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+/* ------------heading------------- */
+
+.price-d {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40px;
+  position: relative;
+}
+
+span {
+  top: 5px;
+  position: relative;
+  padding: 0px 11px;
+}
+
+.box h2 {
+  font-size: 20px;
+  color: var(--grey-blue);
+}
+.bigger h2,
+.bigger > .price {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+}
+
+h1 {
+  color: var(--dark-grey-blue);
+  font-size: 35px;
+  margin: 10px;
+}
+
+.box h2 hr {
+  width: 60%;
+}
+
+.box p {
+  font-size: 16px;
+  line-height: 30px;
+}
+
+/* ------------horizontal line------------- */
+
+.box hr {
+  width: 80%;
+  border: none;
+  border-top: 1px solid;
+}
+
+/* ---------button-------- */
+
+.btn {
+  color: var(--primary-blue);
+  background-color: rgb(255, 255, 255);
+  font-size: 1.4rem;
+  padding: 12px 82px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  border: 2px solid var(--primary-blue);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.bigger > .btn {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 12px 82px;
+}
+
+/* ---------on checkbox---------- */
+.btn-secondary {
+  color: rgb(255, 255, 255);
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  border: none;
+}
+
+.bigger > .btn-secondary2 {
+  color: var(--primary-blue);
+  background: rgb(255, 255, 255);
+  border: none;
+}
+
+/* ------------price------------- */
+
+.price {
+  font-size: 55px;
+  color: var(--dark-grey-blue);
+}
+
+.bigger > .price {
+  font-size: 55px;
+  color: rgb(255, 255, 255);
+}
+
+/* -----------Checkbox Style-------------------------------- */
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.attribution {
+  text-align: center;
+}
+
+@media screen and (max-width: 850px) {
+  .box-container {
+    display: flex;
+    width: 100%;
+  }
+
+  .bigger {
+    width: 21rem;
+  }
+
+  .bigger > .btn {
+    padding: 13px 90px;
+  }
+
+}
+
+@media screen and (max-width: 1070px){
+  .container::after {
+    display: none;
+  }
+}
